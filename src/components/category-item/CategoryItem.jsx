@@ -11,16 +11,18 @@ const transformText = (text) => {
 };
 function CategoryItem({ category }) {
   const navigate = useNavigate();
+  console.log(category);
+  const newName = category.name.replace("-", " ").toLowerCase();
   return (
     <div
       className="category-container"
-      onClick={() => navigate(`/category/${category}`)}
+      onClick={() => navigate(`/category/${category.slug}`)}
     >
       <div className="image-container">
-        <img className="image" src={`./${category}.png`} />
+        <img className="image" src={`./${category.slug}.png`} />
       </div>
       <div className="category-body-container">
-        <h2>{transformText(category.replace("-", " "))}</h2>
+        <h2>{transformText(category.name.replace("-", " "))}</h2>
       </div>
     </div>
   );

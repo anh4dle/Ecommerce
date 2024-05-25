@@ -7,6 +7,7 @@ import "./category-page.styles.scss";
 function CategoryPage() {
   const { name } = useParams();
   const { products } = useContext(ProductContext);
+  console.log(name, products);
   return (
     <div className="category-page-container">
       <div>

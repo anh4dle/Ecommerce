@@ -1,6 +1,9 @@
 .category-page-container {
     min-height: 61vh;
+    width: 100%;
+    overflow-x: scroll;
     >div {
         display: flex;
+        
     }
 }

@@ -12,7 +12,7 @@ const generateRandom = (min, max) => {
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState(null);
   const fetchData = async () => {
-    const myData = await fetch("https://dummyjson.com/products?limit=100");
+    const myData = await fetch("https://dummyjson.com/products?limit=194");
     let result = await myData.json();
 
     for (let product of result.products) {
